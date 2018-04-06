@@ -16,8 +16,8 @@ App* LoginApp = 0;
 
 int main(int argc, char** argv)
 {
+	logStream << "Starting slim" << endl;
 	LoginApp = new App(argc, argv);
 	LoginApp->Run();
 	return 0;
 }
-

@@ -47,7 +47,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -g -O2")
 set(CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} -Wall -g -O2")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -g -O2")
 
-# source 
+# source
 set(slim_srcs
 	main.cpp
 	app.cpp
@@ -221,7 +221,9 @@ endif(BUILD_SLIMLOCK)
 ####### install
 # slim
 install(TARGETS slim RUNTIME DESTINATION bin)
+if(BUILD_SLIMLOCK)
 install(TARGETS slimlock RUNTIME DESTINATION bin)
+endif(BUILD_SLIMLOCK)
 
 if (BUILD_SHARED_LIBS)
 	set_target_properties(libslim PROPERTIES
